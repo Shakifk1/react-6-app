@@ -1,10 +1,10 @@
 import axios from 'axios'
-import React, { useState,useEffect } from 'react'
+import React, { useState } from 'react'
 import { useNavigate,useParams } from 'react-router-dom'
 
 const Edit = () => {
     let navigate = useNavigate()
-    const {id}=useParams();
+    const { id }=useParams();
     const [user,setUser]=useState({
         name:"",
         age:"",
@@ -16,13 +16,14 @@ const Edit = () => {
         setUser({...user,[e.target.name]:e.target.value})
     }
 
-    useEffect(()=>{
-      loadUser()
-    }, []);
+    // useEffect(()=>{
+    //  loadUser()
+    // }, []);
 
     const onSubmit=async (e)=>{
         e.preventDefault();
-        await axios.put(`http://localhost:3003/users/${id}`, user);
+        await axios.put(`http://localhost:3003/users/${id}`, user)
+        loadUser()
         navigate("/student")
     }
 
@@ -30,7 +31,7 @@ const Edit = () => {
       const result = await axios.get(`http://localhost:3003/users/${id}`);
       setUser(result.data);
       console.log(result)
-    }
+    };
 
 
   return (

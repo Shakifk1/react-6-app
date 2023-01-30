@@ -4,23 +4,22 @@ import { Link } from 'react-router-dom';
 
 
 const Student = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUser] = useState([]);
 
   useEffect(() => {
-    console.log("hi")
     loadUsers();
-  }, [])
+  }, []);
 
   const loadUsers = async () => {
     const result = await axios.get("http://localhost:3003/users");
     console.log(result);
-    setUsers(result.data.reverse());
+    setUser(result.data.reverse());
   }
 
   const deleteUser = async id => {
     await axios.delete(`http://localhost:3003/users/${id}`);
     loadUsers();
-  }
+  };
 
   return (
     <>

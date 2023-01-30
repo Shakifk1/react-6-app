@@ -50,13 +50,6 @@
       "batch": "sept"
     },
     {
-      "id": 8,
-      "name": "Nicholas Runolfsdottir V",
-      "age": "25",
-      "course": "mern",
-      "batch": "sept"
-    },
-    {
       "id": 9,
       "name": "Glenna Reichert",
       "age": "25",
@@ -64,11 +57,11 @@
       "batch": "sept"
     },
     {
-      "id": 10,
-      "name": "Clementina DuBuque",
-      "age": "25",
-      "course": "mern",
-      "batch": "sept"
+      "name": "hello bro",
+      "age": "12",
+      "course": "asdfg",
+      "batch": "fdsa",
+      "id": 10
     }
   ]
 }
